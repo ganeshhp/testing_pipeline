@@ -1,0 +1,30 @@
+pipeline {
+  agent {label 'master'}
+    stages {
+       stage('scm_checkout') {
+          
+            steps {
+                checkout scmGit(branches: [[name: '*/master']], 
+                    extensions: [], 
+                    userRemoteConfigs: [[url: 'https://github.com/ganeshhp/helloworldweb.git']])
+            }
+        }
+       
+        stage('build') {
+           
+             steps {
+                    sh 'mvn clean install'
+                }
+        }
+        stage('archive'){
+             steps {
+                archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
+            }
+        }
+        stage('deploy'){
+            steps {
+               sh 'curl -uganeshhp@gmail.com:cmVmdGtuOjAxOjE3NTM5MzkxMzI6WjJLUjhnaGVrS0MxOTNkVnplTDVwZmE5R0dn -T target/*.war "https://ganesh310724.jfrog.io/artifactory/project10-generic-local/helloworldapp.war"'
+            }
+        }
+    }
+}
