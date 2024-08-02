@@ -1,5 +1,5 @@
 pipeline {
-  agent {label 'master'}
+  agent {label 'build_server'}
     stages {
        stage('scm_checkout') {
           
