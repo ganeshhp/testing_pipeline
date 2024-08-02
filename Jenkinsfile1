@@ -4,7 +4,7 @@ pipeline {
        stage('scm_checkout') {
           
             steps {
-                checkout scmGit(branches: [[name: '*/main']], 
+                checkout scmGit(branches: [[name: '*/master']], 
                     extensions: [], 
                     userRemoteConfigs: [[url: 'https://github.com/ganeshhp/helloworldweb.git']])
             }
