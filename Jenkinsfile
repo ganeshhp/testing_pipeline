@@ -29,6 +29,6 @@ node ('build_server') {
     input 'Please provide Approval for deployment to artifactory'
     
     stage ('delpoy_to_artifactory') {
-        sh 'curl -uganeshhp@gmail.com:cmVmdGtuOjAxOjE3NTM5MzkxMzI6WjJLUjhnaGVrS0MxOTNkVnplTDVwZmE5R0dn -T target/*.war "https://ganesh310724.jfrog.io/artifactory/project10-generic-local/petclinic.war"'
+        sh 'curl -uganeshhp@gmail.com:cmVmdGtuOjAxOjE3NTM5MzkxMzI6WjJLUjhnaGVrS0MxOTNk -T target/*.war "https://ganesh310724.jfrog.io/artifactory/project10-generic-local/petclinic.war"'
     }
 }
