@@ -23,7 +23,7 @@ pipeline {
         }
         stage('deploy'){
             steps {
-               sh 'curl -uganeshhp@gmail.com:cmVmdGtuOjAxOjE3NTM5MzkxMzI6WjJLUjhnaGVrS0MxOTNkVnplTDVwZmE5R0dn -T target/*.war "https://ganesh310724.jfrog.io/artifactory/project10-generic-local/helloworldapp.war"'
+               sh 'curl -uganeshhp@gmail.com:cmVmdGtuOjAxOjE3NTM5MzkxMzI6WjJLUjhnaGVrS0Mx -T target/*.war "https://ganesh310724.jfrog.io/artifactory/project10-generic-local/helloworldapp.war"'
             }
         }
     }
